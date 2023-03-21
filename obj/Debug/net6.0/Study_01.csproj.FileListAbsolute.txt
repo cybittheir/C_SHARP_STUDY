@@ -1,0 +1,15 @@
+D:\#CODES\C_SHARP\Study_01\bin\Debug\net6.0\Study_01.exe
+D:\#CODES\C_SHARP\Study_01\bin\Debug\net6.0\Study_01.deps.json
+D:\#CODES\C_SHARP\Study_01\bin\Debug\net6.0\Study_01.runtimeconfig.json
+D:\#CODES\C_SHARP\Study_01\bin\Debug\net6.0\Study_01.dll
+D:\#CODES\C_SHARP\Study_01\bin\Debug\net6.0\Study_01.pdb
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.csproj.AssemblyReference.cache
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.GeneratedMSBuildEditorConfig.editorconfig
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.AssemblyInfoInputs.cache
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.AssemblyInfo.cs
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.csproj.CoreCompileInputs.cache
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.dll
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\refint\Study_01.dll
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.pdb
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\Study_01.genruntimeconfig.cache
+D:\#CODES\C_SHARP\Study_01\obj\Debug\net6.0\ref\Study_01.dll
