@@ -1,6 +1,11 @@
-﻿Console.Clear();
+﻿// Get how many numbers use in comparing
+
+Console.Clear();
 Console.Write("Сколько чисел сравниваем (2-5): ");
-int count =1;
+
+// Testing validate of input while it will be correct
+
+int count =1; // initialize 'count' with value less then range allows
 
 while (count<2||count>5)
 {
@@ -11,6 +16,8 @@ while (count<2||count>5)
     }
 }
 
+// getting numbers for comparing
+
 int i;
 int [] compare =new int[count];
 
@@ -19,6 +26,8 @@ for (i=0;i<count;i++)
     Console.Write($"Введите число №{i+1}: ");
     compare[i]=int.Parse(Console.ReadLine());
 }
+
+// preparing for comparing
 
 int max;
 int min;
@@ -33,6 +42,8 @@ else
         min=compare[0];
         max=compare[count-1];
 }
+
+// find MAX and MIN values
 
 string numbers="";
 
@@ -56,6 +67,8 @@ for (i=0;i<count;i++)
     }
 }
 
+// Selecting odds numbers from the range of MIN and MAX
+
 int j;
 string odds="";
 
@@ -70,6 +83,8 @@ for (j=min;j<=max;j++)
         odds+=", "+j.ToString();
     }
 }
+
+// Printing all results
 
 Console.WriteLine("Числа: " + numbers);
 Console.WriteLine($"Минимум: {min}");
