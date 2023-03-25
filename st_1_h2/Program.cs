@@ -1,12 +1,12 @@
-﻿void GenerateList(int [] compare){
+﻿void FillArray(int [] compare){
 
     // getting numbers for comparing
-    int count=compare.Length;
-    int i;
 
-    for (i=0;i<count;i++)
+    var random = new Random();
+
+    for (int i=1;i<compare.Length;i++)
     {
-        compare[i]=new Random().Next(-30,30);
+        compare[i]=random.Next(-30,30);
     }
 
 }
@@ -112,7 +112,7 @@ while (count<2||count>maxCount)
 
 int [] compare =new int[count];
 
-GenerateList(compare);
+FillArray(compare);
 
 int [] mainValues=Compare(compare);
 
