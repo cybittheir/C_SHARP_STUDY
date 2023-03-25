@@ -14,13 +14,9 @@
 string getOdds(int[]edges){
 // Selecting odds numbers from the range of MIN and MAX
 
-    int i;
     string odds="";
 
-    int min=edges[0];
-    int max=edges[1];
-
-    for (i=min;i<=max;i++)
+    for (int i=edges[0];i<=edges[1];i++)
     {
         if (i%2==0 && odds=="")
         {
@@ -42,7 +38,6 @@ int[] Compare(int[] compare){
 
     int max;
     int min;
-    int i;
 
     if (compare[0]>compare[count-1])
     {
@@ -59,7 +54,7 @@ int[] Compare(int[] compare){
 
     string numbersList="";
 
-    for (i=0;i<count;i++)
+    for (int i=0;i<count;i++)
     {
         if (compare[i]>max)
         {
@@ -116,13 +111,8 @@ FillArray(compare);
 
 int [] mainValues=Compare(compare);
 
-string odds=getOdds(mainValues);
-
-int min=mainValues[0];
-int max=mainValues[1];
-
 // Printing all results
 
-Console.WriteLine($"Минимум: {min}");
-Console.WriteLine($"Максимум: {max}");
-Console.WriteLine($"Все четные числа между крайними значениями(включая их): {odds}");
+Console.WriteLine($"Минимум: {mainValues[0]}");
+Console.WriteLine($"Максимум: {mainValues[1]}");
+Console.WriteLine($"Все четные числа между крайними значениями(включая их): {getOdds(mainValues)}");
