@@ -87,6 +87,8 @@ int[] Compare(int[] compare){
     return edgeValues;
 
 }
+
+// Staring
 // Get how many numbers use in comparing
 
 int maxCount=10;
