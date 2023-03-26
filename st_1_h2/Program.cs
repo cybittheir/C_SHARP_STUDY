@@ -1,13 +1,14 @@
 ﻿// Get how many numbers use in comparing
 
 Console.Clear();
-Console.Write("Сколько чисел сравниваем (2-5): ");
+int maxNum=8;
+Console.Write("Сколько чисел сравниваем (2-{0:D}): ",maxNum);
 
 // Testing validate of input while it will be correct
 
 int count =1; // initialize 'count' with value less then range allows
 
-while (count<2||count>5)
+while (count<2||count>maxNum)
 {
     count=int.Parse(Console.ReadLine());
     if (count<2||count>5)
