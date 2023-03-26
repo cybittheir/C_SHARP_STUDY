@@ -18,10 +18,9 @@ while (count<2||count>5)
 
 // getting numbers for comparing
 
-int i;
 int [] compare =new int[count];
 
-for (i=0;i<count;i++)
+for (int i=0;i<count;i++)
 {
     Console.Write($"Введите число №{i+1}: ");
     compare[i]=int.Parse(Console.ReadLine());
@@ -47,7 +46,7 @@ else
 
 string numbers="";
 
-for (i=0;i<count;i++)
+for (int i=0;i<count;i++)
 {
     if (compare[i]>max)
     {
@@ -69,10 +68,9 @@ for (i=0;i<count;i++)
 
 // Selecting odds numbers from the range of MIN and MAX
 
-int j;
 string odds="";
 
-for (j=min;j<=max;j++)
+for (int j=min;j<=max;j++)
 {
     if (j%2==0 && odds=="")
     {
