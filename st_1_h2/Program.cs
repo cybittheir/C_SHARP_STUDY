@@ -3,10 +3,11 @@
     // getting numbers for comparing
 
     var random = new Random();
+    int edge = 30;
 
     for (int i=1;i<compare.Length;i++)
     {
-        compare[i]=random.Next(-30,30);
+        compare[i]=random.Next(-edge,edge+1);
     }
 
 }
