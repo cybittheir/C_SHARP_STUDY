@@ -10,12 +10,12 @@ if (number==0){
 if (number<100){
     Console.WriteLine("третьей цифры нет");
 } else {
-    int tmp=number/10;
+    int tmp=number;
     while (tmp>999){
         tmp=tmp/10;
     }
 // Решение задачи №13
-    Console.WriteLine($"Третья цифра от({number}): {(tmp-(tmp/100)*100)%10}");
+//    Console.WriteLine($"Третья цифра от({number}): {(tmp-(tmp/100)*100)%10}");
     Console.WriteLine($"Третья цифра от({number}): {tmp%10}");
 }
 
