@@ -9,4 +9,5 @@ while(number<100 || number >999){
 }
 // Решение задачи №10
 Console.WriteLine($"Вторая цифра: {(number-(number/100)*100)/10}");
+Console.WriteLine($"Вторая цифра: {number/10%10}");
 

@@ -7,7 +7,7 @@ int number=int.Parse(Console.ReadLine());
 if (number==0){
     number =new Random().Next(0,12000000);
 }
-if (number/100<1){
+if (number<100){
     Console.WriteLine("третьей цифры нет");
 } else {
     int tmp=number/10;
@@ -16,6 +16,7 @@ if (number/100<1){
     }
 // Решение задачи №13
     Console.WriteLine($"Третья цифра от({number}): {(tmp-(tmp/100)*100)%10}");
+    Console.WriteLine($"Третья цифра от({number}): {tmp%10}");
 }
 
 
