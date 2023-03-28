@@ -9,9 +9,20 @@ int Entrance()
     {
         number =new Random().Next(2,12000000);
     }
+    Console.Clear();
 
     return number;
 
+}
+
+bool ValidNumber(int number)
+{
+    if (number<100)
+    {
+        Console.WriteLine("третьей цифры нет\n=======");
+        return false;
+    }
+    return true;
 }
 
 void NumDigital()
@@ -20,11 +31,7 @@ void NumDigital()
     int tmp=0;
     while((number=Entrance())!=1)
     {
-        if (number<100)
-        {
-            Console.WriteLine("третьей цифры нет");
-        } 
-        else 
+        if (ValidNumber(number))
         {
             tmp=number;
             while (tmp>999)
@@ -32,7 +39,7 @@ void NumDigital()
                 tmp=tmp/10;
             }
 //            Console.WriteLine($"Третья цифра от({number}): {(tmp-(tmp/100)*100)%10}");
-            Console.WriteLine($"Третья цифра от({number}): {tmp%10}");
+            Console.WriteLine($"Третья цифра от({number}): {tmp%10}\n=======");
         }
 
     }
