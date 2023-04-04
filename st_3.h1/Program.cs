@@ -81,6 +81,6 @@ int MirrorDig(int number)
     else
     {
         Console.WriteLine($"Увы, {number} - обычное число");
-
     }
+
 
