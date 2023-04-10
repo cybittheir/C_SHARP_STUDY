@@ -5,20 +5,61 @@
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 */
+const int FACTOR = 0;
+const int CONSTANT = 1;
+const int X_COORD = 0;
+const int Y_COORD = 1;
+const int LINE1 = 0;
+const int LINE2 = 1;
 
-double [] findPoint(int b1,int k1,int b2, int k2){
 
-    double x = (Convert.ToDouble(b2)-Convert.ToDouble(b1))/(Convert.ToDouble(k1)-Convert.ToDouble(k2));
-    double y = Convert.ToDouble(k1)*x + Convert.ToDouble(b1);
+double [] findPoint(double [] lineFirst,double[]lineSecond){
+
+    double x = (lineSecond[CONSTANT]-lineFirst[CONSTANT])/(lineFirst[FACTOR]-lineSecond[FACTOR]);
+    double y = lineFirst[FACTOR]*x + lineFirst[CONSTANT];
     double[]result={x,y};
     return result;
 }
 
-int a=6;
-int b=3;
-int c=4;
-int d=9;
+double [] getLine(string prompt,int number) {
+    Console.WriteLine($"{prompt} {number+1}:");
+    return getNums();
+}
 
-Console.Write($"b1 = {a}, k1 = {b}, b2 = {c}, k2 = {d} -> ");
-double [] point=findPoint(a,b,c,d);
-Console.WriteLine($"({point[0]:f2}; {point[1]:f2})");
+double [] getNums(){
+    
+    double []nums=new double[2];
+    Console.Write($"Введите коффициент:");
+    nums[FACTOR]=Convert.ToDouble(Console.ReadLine());
+    Console.Write($"Введите константу:");
+    nums[CONSTANT]=Convert.ToDouble(Console.ReadLine());
+    return nums;
+
+}
+
+bool checkValid(double []line1,double []line2){
+
+    if (line1[FACTOR]==line2[FACTOR] && line1[CONSTANT]==line2[CONSTANT]){
+        Console.WriteLine("Линии совпадают");
+        return false;
+    } else if (line1[FACTOR]==line2[FACTOR]) {
+        Console.WriteLine("Линии параллельны");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+double [] lineFirst;
+double [] lineSecond;
+
+string prompt="Введите данные линии №";
+lineFirst = getLine(prompt,LINE1);
+lineSecond = getLine(prompt,LINE2);
+
+Console.Write($"b1 = {lineFirst[FACTOR]}, k1 = {lineFirst[CONSTANT]}, b2 = {lineSecond[FACTOR]}, k2 = {lineSecond[CONSTANT]} -> ");
+
+if (checkValid(lineFirst,lineSecond)){
+    double [] point=findPoint(lineFirst,lineSecond);
+    Console.WriteLine($"Точка пересечения линий: ({point[X_COORD]:f2}; {point[Y_COORD]:f2})");
+}

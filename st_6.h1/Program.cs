@@ -15,7 +15,7 @@ void calcPositive(string [] array) {
             result++;
         }
     }
-    Console.WriteLine(result);
+    Console.WriteLine($"Количество цифр больше 0 - {result}");
 }
 
 string [] inputArray(string prompt) {
