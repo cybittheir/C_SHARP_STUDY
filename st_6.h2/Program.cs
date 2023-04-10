@@ -29,11 +29,17 @@ double [] getLine(string prompt,int number) {
 double [] getNums(){
     
     double []nums=new double[2];
-    Console.Write($"Введите коффициент:");
-    nums[FACTOR]=Convert.ToDouble(Console.ReadLine());
-    Console.Write($"Введите константу:");
-    nums[CONSTANT]=Convert.ToDouble(Console.ReadLine());
+    nums[FACTOR]=getValue("Введите коффициент:");
+    nums[CONSTANT]=getValue("Введите константу:");
     return nums;
+
+}
+
+double getValue(string prompt){
+    
+    Console.Write(prompt);
+    double val=Convert.ToDouble(Console.ReadLine());
+    return val;
 
 }
 
